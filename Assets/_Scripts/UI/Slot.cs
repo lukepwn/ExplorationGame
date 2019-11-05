@@ -8,8 +8,10 @@ public class Slot : MonoBehaviour
     public GameObject item;
     public bool empty;
 
+    public int itemPrice;
     public Transform slotIconGO;
     public Sprite icon;
+
 
     public void UpdateSlot()
     {

@@ -5,19 +5,19 @@ using UnityEngine.UI;
 
 public class GoldText : MonoBehaviour
 {
+    public GameObject player;
     private Text gold;
-    public int goldCount;
 
     // Start is called before the first frame update
     void Start()
     {
-        goldCount = 0;
         gold = GetComponent<Text>();
+        gold.text = "0";
     }
 
     // Update is called once per frame
     void Update()
     {
-        gold.text = goldCount.ToString();
+        gold.text = player.GetComponent<Inventory>().gold.ToString();
     }
 }

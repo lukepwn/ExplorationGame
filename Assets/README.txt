@@ -9,6 +9,6 @@ I - Inventory
 
 
 Checklist:
-- gold count
+- gold count - complete
 - NPC Merchant & Store?
 - Healthpoints for player

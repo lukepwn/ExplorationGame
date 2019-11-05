@@ -37,6 +37,12 @@ public class NPCRabbit : MonoBehaviour
                 slot[i].GetComponent<Slot>().icon = itemSprites[i];
                 slot[i].GetComponent<Slot>().UpdateSlot();
                 slot[i].GetComponent<Slot>().empty = false;
+
+                // set price to 2 - for potions
+                if (slot[i].GetComponent<Slot>().item.tag == "Potion")
+                {
+                    slot[i].GetComponent<Slot>().itemPrice = 2;
+                }
             }
         }
 
@@ -48,6 +54,9 @@ public class NPCRabbit : MonoBehaviour
         {
             Debug.Log("OnTriggerStay: " + other.transform.name);
             ShopPanel.SetActive(true);
+            // turn on inventory 
+            ShopPanel.transform.parent.GetChild(0).gameObject.SetActive(true);
+            
         }
     }
 
@@ -57,6 +66,8 @@ public class NPCRabbit : MonoBehaviour
         {
             Debug.Log("OnTriggerExit: " + other.transform.name);
             ShopPanel.SetActive(false);
+            // turn off inventory 
+            ShopPanel.transform.parent.GetChild(0).gameObject.SetActive(false);
         }
     }
 

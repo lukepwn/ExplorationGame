@@ -65,6 +65,8 @@
   <ItemGroup>
     <Compile Include="Assets\_Scripts\FloorLift.cs" />
     <Compile Include="Assets\_Scripts\Gold.cs" />
+    <Compile Include="Assets\_Scripts\HealthPoints.cs" />
+    <Compile Include="Assets\_Scripts\Inventory.cs" />
     <Compile Include="Assets\_Scripts\Item.cs" />
     <Compile Include="Assets\_Scripts\NPC\NPCRabbit.cs" />
     <Compile Include="Assets\_Scripts\NPC\ShopItemButton.cs" />
@@ -73,7 +75,6 @@
     <Compile Include="Assets\_Scripts\SoundManager.cs" />
     <Compile Include="Assets\_Scripts\TriggerLevel.cs" />
     <Compile Include="Assets\_Scripts\UI\GoldText.cs" />
-    <Compile Include="Assets\_Scripts\UI\Inventory.cs" />
     <Compile Include="Assets\_Scripts\UI\Slot.cs" />
     <Compile Include="Assets\AssetStoreImports\Rabbits\Demo\Scripts\AnimatorParamatersChange.cs" />
     <None Include="Assets\README.txt" />

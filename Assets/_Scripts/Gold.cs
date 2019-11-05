@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Gold : MonoBehaviour
 {
-    public GameObject goldText;
-    private int goldNumber;
+    public int goldNumber;
 
     // Start is called before the first frame update
     void Start()
     {
-        goldNumber = Random.Range(1, 2);
+        // between 1 and 2
+        goldNumber = Random.Range(1, 3);
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class Gold : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            goldText.GetComponent<GoldText>().goldCount += goldNumber;
+            other.GetComponent<Inventory>().gold += goldNumber;
             Destroy(this.gameObject);
         }
     }

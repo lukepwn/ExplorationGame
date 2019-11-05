@@ -12,11 +12,13 @@ public class Inventory : MonoBehaviour
     private int allSlots;
     private int enabledSlots;
     public static GameObject[] slot;
-	
+
+    public int gold;
 
     public GameObject slotHolder;
 	
 	public Transform targetBone;
+	private HealthPoints hp;
 
     // Start is called before the first frame update
     void Start()
@@ -88,35 +90,60 @@ public class Inventory : MonoBehaviour
 	
 	private void SelectItem()
     {
-        
         //Debug.Log(slot[0].GetComponent<Slot>().item);
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        /* if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            if(slot[0].GetComponent<Slot>().item != null)
-            {
-                
-                slot[0].GetComponent<Slot>().item.SetActive(true);
-                slot[0].GetComponent<Slot>().RemoveSlot();
-                slot[0].GetComponent<Slot>().empty = true;
-                //Debug.Log(slot[0].GetComponent<Slot>().item);
-                
-                GameObject newItem;
-                newItem = Instantiate(slot[0].GetComponent<Slot>().item, targetBone.position, targetBone.rotation);
-                //Debug.Log(targetBone.position);
-                //Debug.Log(targetBone.rotation);
-                newItem.transform.parent = targetBone;
-                
-                newItem.GetComponent<BoxCollider>().isTrigger = false;
-                newItem.GetComponent<Rigidbody>().isKinematic = true;
-                
-                Destroy(slot[0].GetComponent<Slot>().item);
-            }
-        }
-        
+            SelectItems(0);
+        } */
+		
+		var input = Input.inputString;
+		switch (input)
+		{
+			case "1":
+			SelectItems(0);
+			break;
+			
+			case "2":
+			SelectItems(1);
+			break;
+		}
     }
 	
-	
-	
+	private void SelectItems(int num)
+	{
+		if (slot[num].GetComponent<Slot>().item.transform.name == "potion")
+		{
+			slot[num].GetComponent<Slot>().RemoveSlot();
+			slot[num].GetComponent<Slot>().empty = true;
+			
+			
+			hp = GetComponent<HealthPoints>();
+			hp.Heal();
+		}
+			
+		else if (slot[num].GetComponent<Slot>().item != null)
+		{
+			//Debug.Log(num);
+			slot[num].GetComponent<Slot>().item.SetActive(true);
+			slot[num].GetComponent<Slot>().RemoveSlot();
+			slot[num].GetComponent<Slot>().empty = true;
+			//Debug.Log(slot[0].GetComponent<Slot>().item);
+			
+			GameObject newItem;
+			newItem = Instantiate(slot[num].GetComponent<Slot>().item, targetBone.position, targetBone.rotation);
+			//Debug.Log(targetBone.position);
+			//Debug.Log(targetBone.rotation);
+			newItem.transform.parent = targetBone;
+			
+			if (newItem.GetComponent<BoxCollider>()) 
+				newItem.GetComponent<BoxCollider>().isTrigger = false;
+			
+			if (newItem.GetComponent<Rigidbody>())
+				newItem.GetComponent<Rigidbody>().isKinematic = true;
+			
+			Destroy(slot[num].GetComponent<Slot>().item);
+		}
+	}
 	
     // Update is called once per frame
     void Update()
