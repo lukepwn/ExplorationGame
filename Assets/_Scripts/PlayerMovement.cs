@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
 	 */
     void Update()
     {
-		Debug.Log(player.transform.position.y);
+		//Debug.Log(player.transform.position.y);
 		if (player.transform.position.y < -1) 
 		{
 			//Debug.Log("u died");

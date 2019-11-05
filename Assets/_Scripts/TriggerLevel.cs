@@ -6,22 +6,20 @@ using UnityEngine.SceneManagement;
 public class TriggerLevel : MonoBehaviour
 {
 
-    private string level = "Level1";
+    private string level1 = "Level1";
+	private string level0 = "FreeWorld";
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void OnTriggerEnter (Collider col)
     {
-        SceneManager.LoadScene(level);
+		//Debug.Log(transform.name);
+		
+		if (transform.name == "flag")
+			SceneManager.LoadScene(level0);
+		
+		
+		if (transform.name == "Fortress Gate") 
+			SceneManager.LoadScene(level1);
+		
     }
 }
