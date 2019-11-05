@@ -32,6 +32,10 @@ public class PlayerMovement : MonoBehaviour
 	
 	private PlayerSpawn revive;
 	
+	private HealthPoints hp;
+	
+	public bool check;
+	
     /* ----------------------------------------
 	 * At Start, get character's Animator and Character Controller components
 	 */
@@ -45,9 +49,11 @@ public class PlayerMovement : MonoBehaviour
 		
 		player = GetComponent<Transform>();
 		
+		revive = GetComponent<PlayerSpawn>();
 		
+		hp = GetComponent<HealthPoints>();
 		
-		
+		check = false;
     }
 
     /* ----------------------------------------
@@ -55,13 +61,20 @@ public class PlayerMovement : MonoBehaviour
 	 */
     void Update()
     {
-		//Debug.Log(player.transform.position.y);
-		if (player.transform.position.y < -1) 
+		if(check == false) 
 		{
-			//Debug.Log("u died");
-			//Time.timeScale = 0;
-			revive = GetComponent<PlayerSpawn>();
-			revive.Revive();
+			//Debug.Log(player.transform.position.y);
+			if (player.transform.position.y < -1) 
+			{
+				
+				//Debug.Log("u died");
+				//Time.timeScale = 0;
+				
+				revive.Revive();
+				hp.TakeDamage();
+				check = true;
+				
+			}
 		}
 
         // IF Character Controller is grounded...

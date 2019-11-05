@@ -23,6 +23,8 @@ public class PlayerSpawn : MonoBehaviour
 		GetComponent<Animator>().enabled = true;
 		GetComponent<CharacterController>().enabled = true;
 		
+		
+		GetComponent<PlayerMovement>().check = false;
 		//Debug.Log(transform.position);
 	}
 }

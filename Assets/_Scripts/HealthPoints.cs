@@ -23,6 +23,7 @@ public class HealthPoints : MonoBehaviour
 	public void TakeDamage()
 	{
 		playerhp -= 30;
+		Debug.Log(playerhp);
 	}
 	
 }

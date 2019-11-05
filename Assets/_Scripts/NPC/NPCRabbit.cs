@@ -68,6 +68,9 @@ public class NPCRabbit : MonoBehaviour
             ShopPanel.SetActive(false);
             // turn off inventory 
             ShopPanel.transform.parent.GetChild(0).gameObject.SetActive(false);
+
+            // turn off not enough gold panel
+            ShopPanel.transform.Find("NotEnoughGold").gameObject.SetActive(false);
         }
     }
 

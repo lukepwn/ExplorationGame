@@ -10,5 +10,8 @@ I - Inventory
 
 Checklist:
 - gold count - complete
-- NPC Merchant & Store?
-- Healthpoints for player
+- NPC Merchant & Store - in progress
+- Healthpoints for player - in progress
+- multiple levels
+- respawn - in preogress
+
