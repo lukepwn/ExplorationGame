@@ -6,6 +6,7 @@ public class PlayerSpawn : MonoBehaviour
 {
 	
 	public GameObject spawnpoint;
+	public ParticleSystem effect;
 
 	public void Revive() 
 	{
@@ -22,9 +23,9 @@ public class PlayerSpawn : MonoBehaviour
 		transform.rotation = spawnpoint.transform.rotation;
 		GetComponent<Animator>().enabled = true;
 		GetComponent<CharacterController>().enabled = true;
-		
-		
 		GetComponent<PlayerMovement>().check = false;
+		
+		effect.Play();
 		//Debug.Log(transform.position);
 	}
 }

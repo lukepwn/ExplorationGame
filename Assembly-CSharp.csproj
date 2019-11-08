@@ -63,6 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\_Prefabs\Misc Effects\Scripts\SpawnEffect.cs" />
+    <Compile Include="Assets\_Scripts\Door.cs" />
     <Compile Include="Assets\_Scripts\FloorLift.cs" />
     <Compile Include="Assets\_Scripts\Gold.cs" />
     <Compile Include="Assets\_Scripts\HealthPoints.cs" />
@@ -78,8 +80,13 @@
     <Compile Include="Assets\_Scripts\UI\Slot.cs" />
     <Compile Include="Assets\AssetStoreImports\Rabbits\Demo\Scripts\AnimatorParamatersChange.cs" />
     <None Include="Assets\README.txt" />
+    <None Include="Assets\_Prefabs\Misc Effects\Shaders\Dissolve.shader" />
+    <None Include="Assets\_Prefabs\Misc Effects\Shaders\FireFly.shader" />
+    <None Include="Assets\_Prefabs\Misc Effects\Prefabs\Readme_Dissolve_Respawn_.txt" />
     <None Include="Assets\AssetStoreImports\Key\readME keys.txt" />
+    <None Include="Assets\_Prefabs\Misc Effects\Shaders\Respawn.shader" />
     <None Include="Assets\AssetStoreImports\Fortress Gate_Free\ReadMe.txt" />
+    <None Include="Assets\AssetStoreImports\SciFi_Door\readme.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/lukep/Documents/winter2019/PROG38634 3D Game/FinalProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
@@ -98,8 +105,14 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>C:/Users/lukep/Documents/winter2019/PROG38634 3D Game/FinalProject/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="com.unity.postprocessing.Editor">
+      <HintPath>C:/Users/lukep/Documents/winter2019/PROG38634 3D Game/FinalProject/Library/ScriptAssemblies/com.unity.postprocessing.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>C:/Users/lukep/Documents/winter2019/PROG38634 3D Game/FinalProject/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.postprocessing.Runtime">
+      <HintPath>C:/Users/lukep/Documents/winter2019/PROG38634 3D Game/FinalProject/Library/ScriptAssemblies/com.unity.postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>C:/Users/lukep/Documents/winter2019/PROG38634 3D Game/FinalProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>

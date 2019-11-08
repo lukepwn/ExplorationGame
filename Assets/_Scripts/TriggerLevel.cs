@@ -14,7 +14,8 @@ public class TriggerLevel : MonoBehaviour
     {
 		//Debug.Log(transform.name);
 		
-		if (transform.name == "flag")
+		if (col.gameObject.tag == "Player" && transform.name == "flag_med")
+			//Debug.Log("flag");
 			SceneManager.LoadScene(level0);
 		
 		
