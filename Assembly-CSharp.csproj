@@ -63,6 +63,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\_Animations\AI Controller\AI.cs" />
+    <Compile Include="Assets\_Animations\AI Controller\bullet.cs" />
+    <Compile Include="Assets\_Animations\AI Controller\ChaseBehaviour.cs" />
+    <Compile Include="Assets\_Animations\AI Controller\FindNextTargetBehaviour.cs" />
+    <Compile Include="Assets\_Animations\AI Controller\FireBehaviour.cs" />
+    <Compile Include="Assets\_Animations\AI Controller\FleeBehaviour.cs" />
+    <Compile Include="Assets\_Animations\AI Controller\MoveToTargetBehaviour.cs" />
+    <Compile Include="Assets\_Animations\AI Controller\playerController.cs" />
+    <Compile Include="Assets\_Animations\AI Controller\stopBehaviour.cs" />
     <Compile Include="Assets\_Prefabs\Misc Effects\Scripts\SpawnEffect.cs" />
     <Compile Include="Assets\_Scripts\Door.cs" />
     <Compile Include="Assets\_Scripts\FloorLift.cs" />
@@ -77,6 +86,7 @@
     <Compile Include="Assets\_Scripts\SoundManager.cs" />
     <Compile Include="Assets\_Scripts\TriggerLevel.cs" />
     <Compile Include="Assets\_Scripts\UI\GoldText.cs" />
+    <Compile Include="Assets\_Scripts\UI\MenuBtn.cs" />
     <Compile Include="Assets\_Scripts\UI\Slot.cs" />
     <Compile Include="Assets\AssetStoreImports\Rabbits\Demo\Scripts\AnimatorParamatersChange.cs" />
     <None Include="Assets\README.txt" />

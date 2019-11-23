@@ -5,13 +5,21 @@ CONTROLS
 WASD - Move
 Space - Jump
 I - Inventory
+Left Mouse Click - some UI 
 
+
+Priority:
+- Fix movement
+
+
+
+Levels: 3
 
 
 Checklist:
-- gold count - complete
-- NPC Merchant & Store - in progress
-- Healthpoints for player - in progress
-- multiple levels
-- respawn - in preogress
+- Fix skybox
+- level 2 - in progress
+
+Luke:
+- Fix revive script on FreeWorld
 

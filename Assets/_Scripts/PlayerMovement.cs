@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
 				//Time.timeScale = 0;
 				
 				revive.Revive();
-				hp.TakeDamage();
+				hp.changeHealth(-30);
 				check = true;
 				
 			}

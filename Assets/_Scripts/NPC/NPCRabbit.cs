@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NPCRabbit : MonoBehaviour
 {
@@ -18,7 +19,6 @@ public class NPCRabbit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         allSlots = 6;
         slot = new GameObject[allSlots];
 
@@ -38,6 +38,8 @@ public class NPCRabbit : MonoBehaviour
                 slot[i].GetComponent<Slot>().UpdateSlot();
                 slot[i].GetComponent<Slot>().empty = false;
 
+                slot[i].transform.Find("number").GetComponent<Text>().text = (i+1).ToString();
+
                 // set price to 2 - for potions
                 if (slot[i].GetComponent<Slot>().item.tag == "Potion")
                 {
@@ -55,7 +57,7 @@ public class NPCRabbit : MonoBehaviour
             Debug.Log("OnTriggerStay: " + other.transform.name);
             ShopPanel.SetActive(true);
             // turn on inventory 
-            ShopPanel.transform.parent.GetChild(0).gameObject.SetActive(true);
+            //ShopPanel.transform.parent.GetChild(0).gameObject.SetActive(true);
             
         }
     }
@@ -67,7 +69,7 @@ public class NPCRabbit : MonoBehaviour
             Debug.Log("OnTriggerExit: " + other.transform.name);
             ShopPanel.SetActive(false);
             // turn off inventory 
-            ShopPanel.transform.parent.GetChild(0).gameObject.SetActive(false);
+            //ShopPanel.transform.parent.GetChild(0).gameObject.SetActive(false);
 
             // turn off not enough gold panel
             ShopPanel.transform.Find("NotEnoughGold").gameObject.SetActive(false);

@@ -1,29 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthPoints : MonoBehaviour
 {
-	
-	private float playerhp;
+    public float playerHealth;
+    public Slider healthFill;
+    public float maxHealth;
 	
     // Start is called before the first frame update
     void Start()
     {
-        playerhp = 100;
+        maxHealth = 100;
+        healthFill.value = maxHealth;
+        playerHealth = maxHealth;
     }
 
-	public void Heal() 
-	{
-		Debug.Log(playerhp);
-		playerhp += 25;
-		Debug.Log(playerhp);
-	}
-	
-	public void TakeDamage()
-	{
-		playerhp -= 30;
-		Debug.Log(playerhp);
-	}
-	
+    public void changeHealth(float amount)
+    {
+        playerHealth += amount;
+        //playerHealth = Mathf.Clamp(playerHealth, 0, maxHealth);
+        healthFill.value = playerHealth / maxHealth;
+
+        if (playerHealth > 100)
+        {
+            playerHealth = 100;
+        }
+        if (playerHealth <= 0)
+        {
+            // do something here
+        }
+    }
+
+
+
 }
